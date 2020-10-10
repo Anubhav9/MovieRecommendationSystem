@@ -193,4 +193,5 @@ def submit():
     	m7t=movie_7_year,m7p=movie_7_plot,p7=movie_7_poster,m8t=movie_8_year,m8p=movie_8_plot,p8=movie_8_poster)
 
 
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
