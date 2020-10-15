@@ -4,7 +4,7 @@ from flask import Flask,render_template,request
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt
-app = Flask('testapp')
+app = Flask(__name__)
 
 
 @app.route('/', methods=['GET','POST'])
@@ -242,5 +242,5 @@ def submit():
     	m5t=movie_5_year,m5p=movie_5_plot,p5=movie_5_poster,m6t=movie_6_year,m6p=movie_6_plot,p6=movie_6_poster,
     	m7t=movie_7_year,m7p=movie_7_plot,p7=movie_7_poster,m8t=movie_8_year,m8p=movie_8_plot,p8=movie_8_poster)
 
-
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
